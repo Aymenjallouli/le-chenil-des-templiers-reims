@@ -1,0 +1,1062 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Le Chenil des Templiers, pension canine près de Reims</title>
+<meta name="description" content="Pension pour chiens et chats à La Neuville-au-Temple (51) : box individuel, parc privatif, ouverte toute l'année. Noté 4,9/5 sur 101 avis Google.">
+<meta property="og:title" content="Le Chenil des Templiers, pension canine près de Reims">
+<meta property="og:description" content="Box individuel, parc privatif, balades et photos du séjour sur Facebook. Pension pour chiens et chats à La Neuville-au-Temple.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#2c3a2b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M6 62V30a26 26 0 0 1 52 0v32z' fill='%232c3a2b'/%3E%3Ctext x='32' y='53' font-family='Georgia,serif' font-size='32' font-weight='700' fill='%23e3aa6c' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500&family=Figtree:wght@400;600&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Le Chenil des Templiers",
+  "description": "Pension pour chiens et chats, élevage et éducation canine à La Neuville-au-Temple.",
+  "telephone": "+33681824451",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "107 Les Grandes Noues",
+    "postalCode": "51400",
+    "addressLocality": "La Neuville-au-Temple",
+    "addressCountry": "FR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 49.0302847, "longitude": 4.4076981 },
+  "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJWQh5bKnf60cRReWa1o8f0TY",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "16:00", "closes": "18:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "10:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "17:00", "closes": "18:30" }
+  ],
+  "sameAs": ["https://www.facebook.com/lechenildestempliers/"]
+}
+</script>
+<style>
+/* ==========================================================================
+   LE CHENIL DES TEMPLIERS — design decisions
+   Palette  Pulled from photo-01: ivy-green undergrowth (--brand), the tawny
+            fur of the Lapphund (--accent), the cream of its tail (--bg), the
+            near-black coat (--ink). Countryside, warm, family-run. No blue,
+            no gradients, no glow.
+   Type     Fraunces (600 + 500 italic): a warm optical serif with a carved,
+            old-stone feel that suits "Templiers". Figtree 400/600 for body:
+            plain, friendly, very legible at 16px.
+   Motif    The Romanesque arch (La Neuville-au-Temple, the Templars' village):
+            it frames the hero photo, shapes the monogram, marks the timeline.
+   Hero     Split editorial: a two-sentence statement lifted from the reviews,
+            photo-01 in an arch frame with a slow Ken Burns and a turning seal.
+   Rhythm   cream hero -> full-bleed ivy-green proof with an oversized 4,9 (the
+            one strong colour move) -> cream services, asymmetric photo ->
+            sand "séjour" timeline with stacked photos -> hours + map ->
+            typographic contact -> dark footer.
+   ========================================================================== */
+:root {
+  --bg: #f5efe4;
+  --surface: #fbf8f1;
+  --sand: #ebe1cf;
+  --ink: #1e1b16;
+  --ink-soft: #594f43;
+  --brand: #2c3a2b;
+  --brand-2: #364636;
+  --brand-ink: #f5efe4;
+  --accent: #9a4f1b;
+  --accent-soft: #e3aa6c;
+  --line: #dccfb9;
+  --line-dark: rgba(245, 239, 228, .16);
+  --open: #2f7a3e;
+
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --step--1: clamp(.875rem, .85rem + .12vw, .9375rem);
+  --step-0: clamp(1rem, .96rem + .2vw, 1.125rem);
+  --step-1: clamp(1.1875rem, 1.1rem + .45vw, 1.4rem);
+  --step-2: clamp(1.4rem, 1.22rem + .85vw, 1.9rem);
+  --step-3: clamp(1.75rem, 1.4rem + 1.6vw, 2.75rem);
+  --step-4: clamp(2.2rem, 1.6rem + 2.8vw, 3.9rem);
+  --step-5: clamp(2.5rem, 1.55rem + 4.3vw, 5.25rem);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --section-pad: clamp(56px, 10vw, 128px);
+  --gutter: clamp(16px, 5vw, 40px);
+  --header-h: 64px;
+  --bar-h: 68px;
+
+  --r-sm: 12px;
+  --r-md: 20px;
+  --r-lg: 32px;
+  --r-pill: 999px;
+  --arch: 50% 50% var(--r-md) var(--r-md) / 40% 40% var(--r-md) var(--r-md);
+
+  --shadow-1: 0 1px 2px rgba(30, 27, 22, .06), 0 2px 8px rgba(30, 27, 22, .05);
+  --shadow-2: 0 2px 4px rgba(30, 27, 22, .06), 0 14px 32px -10px rgba(30, 27, 22, .22);
+  --shadow-3: 0 6px 12px rgba(30, 27, 22, .06), 0 36px 70px -24px rgba(30, 27, 22, .42);
+
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 var(--step-0)/1.6 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: calc(var(--bar-h) + env(safe-area-inset-bottom));
+  overflow-x: clip;
+}
+body.menu-open { overflow: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  text-wrap: balance;
+}
+p { margin: 0; text-wrap: pretty; }
+a { color: inherit; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+blockquote { margin: 0; }
+figure { margin: 0; }
+[id] { scroll-margin-top: calc(var(--header-h) + 16px); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.on-dark :focus-visible { outline-color: var(--accent-soft); }
+
+[hidden] { display: none !important; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: absolute; left: var(--space-4); top: -120px; z-index: 100;
+  background: var(--ink); color: var(--bg); padding: var(--space-3) var(--space-5);
+  border-radius: var(--r-pill); font-weight: 600; text-decoration: none;
+}
+.skip-link:focus { top: var(--space-3); }
+
+.container { width: 100%; max-width: calc(1200px + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+.section { padding-block: var(--section-pad); }
+
+.icon {
+  width: 1.25em; height: 1.25em; flex: none;
+  fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;
+}
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: var(--space-3);
+  font: 600 var(--step--1)/1.2 var(--font-body);
+  letter-spacing: .14em; text-transform: uppercase; color: var(--accent);
+  margin-bottom: var(--space-4);
+}
+.eyebrow::before {
+  content: ""; width: 12px; height: 15px; flex: none;
+  border: 2px solid currentColor; border-bottom: 0; border-radius: 6px 6px 0 0;
+}
+.on-dark .eyebrow { color: var(--accent-soft); }
+.h2 { font-size: var(--step-4); }
+.lede { font-size: var(--step-1); line-height: 1.5; color: var(--ink-soft); max-width: 60ch; }
+
+/* Buttons ---------------------------------------------------------------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .6em;
+  min-height: 52px; padding: 0 1.4em; border-radius: var(--r-pill);
+  font: 600 var(--step-0)/1.1 var(--font-body); text-decoration: none; text-align: center;
+  border: 1.5px solid transparent;
+  transition: transform .35s var(--ease);
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+.btn--brand { background: var(--brand); color: var(--brand-ink); box-shadow: var(--shadow-2); }
+.btn--brand:hover { background: #233022; }
+.btn--line { border-color: currentColor; color: var(--ink); }
+.btn--line:hover { background: var(--surface); }
+.btn--light { background: var(--brand-ink); color: var(--brand); }
+.link-arrow {
+  display: inline-flex; align-items: center; gap: .5em; min-height: 44px;
+  font-weight: 600; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px;
+}
+.link-arrow .icon { transition: transform .35s var(--ease); }
+.link-arrow:hover .icon { transform: translateX(4px); }
+
+/* Header ----------------------------------------------------------------- */
+.site-header {
+  position: sticky; top: 0; z-index: 70;
+  background: var(--bg);
+  border-bottom: 1px solid transparent;
+}
+.site-header.is-scrolled { border-bottom-color: var(--line); box-shadow: var(--shadow-1); }
+.header__inner { display: flex; align-items: center; gap: var(--space-4); height: var(--header-h); }
+.brand { display: inline-flex; align-items: center; gap: var(--space-3); text-decoration: none; min-height: 44px; margin-right: auto; }
+.brand__mark { width: 32px; height: 38px; color: var(--brand); flex: none; }
+.brand__mark text { font: 600 22px var(--font-display); fill: var(--accent-soft); }
+.brand__name { font: 600 1.125rem/1 var(--font-display); letter-spacing: -.01em; white-space: nowrap; }
+.brand__name em { font-style: italic; font-weight: 500; color: var(--accent); }
+.header__cta { display: none; min-height: 44px; padding-inline: 1.1em; font-size: var(--step--1); }
+.menu-toggle {
+  display: inline-grid; place-items: center; width: 48px; height: 48px; margin-right: -8px;
+  background: none; border: 0; color: var(--ink); border-radius: var(--r-sm); cursor: pointer;
+}
+.menu-toggle .icon { width: 26px; height: 26px; }
+.menu-toggle .i-close { display: none; }
+.menu-toggle[aria-expanded="true"] .i-open { display: none; }
+.menu-toggle[aria-expanded="true"] .i-close { display: block; }
+
+.nav {
+  position: fixed; inset: var(--header-h) 0 0 0; z-index: 65;
+  background: var(--bg);
+  padding: var(--space-6) var(--gutter) calc(var(--space-7) + env(safe-area-inset-bottom));
+  display: flex; flex-direction: column; justify-content: space-between; gap: var(--space-6);
+  overflow-y: auto;
+  opacity: 0; visibility: hidden; transform: translateY(-10px);
+  transition: opacity .3s var(--ease), transform .3s var(--ease), visibility 0s linear .3s;
+}
+.nav.is-open { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+.nav__list { display: grid; }
+.nav__list a {
+  display: flex; align-items: center; justify-content: space-between; min-height: 64px;
+  font: 600 var(--step-3)/1.1 var(--font-display); letter-spacing: -.02em; text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+.nav__list a::after { content: "→"; font-family: var(--font-body); font-size: var(--step-1); color: var(--accent); }
+.nav__call { width: 100%; }
+
+@media (min-width: 768px) {
+  .header__cta { display: inline-flex; }
+}
+@media (min-width: 960px) {
+  :root { --header-h: 76px; }
+  .menu-toggle, .nav__call { display: none; }
+  .nav {
+    position: static; inset: auto; padding: 0; background: none; overflow: visible;
+    opacity: 1; visibility: visible; transform: none; transition: none; flex-direction: row;
+  }
+  .nav__list { display: flex; gap: var(--space-1); }
+  .nav__list a {
+    min-height: 44px; padding: 0 var(--space-3); border: 0;
+    font: 600 var(--step--1)/1 var(--font-body); letter-spacing: 0; border-radius: var(--r-pill);
+  }
+  .nav__list a::after { content: none; }
+  .nav__list a:hover { background: var(--sand); }
+  .brand__mark { width: 36px; height: 43px; }
+  .brand__name { font-size: 1.3rem; }
+}
+
+/* Hero ------------------------------------------------------------------- */
+.hero { padding-block: var(--space-3) var(--section-pad); }
+.hero__grid { display: grid; gap: var(--space-6); align-items: center; }
+.hero__copy { display: flex; flex-direction: column; align-items: flex-start; }
+.hero__kicker { margin-bottom: var(--space-3); }
+.hero__title { font-size: var(--step-5); line-height: 1.02; letter-spacing: -.035em; }
+.hero__title .l2 { display: block; font-style: italic; font-weight: 500; color: var(--brand); }
+.hero__lede { order: 5; margin-top: var(--space-6); font-size: var(--step-1); line-height: 1.5; color: var(--ink-soft); max-width: 46ch; }
+.hero__meta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-4); margin-top: var(--space-5); }
+.chip {
+  display: inline-flex; align-items: center; gap: var(--space-2); min-height: 44px; padding: 0 var(--space-4) 0 var(--space-3);
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-pill);
+  font-weight: 600; text-decoration: none; box-shadow: var(--shadow-1);
+  transition: transform .35s var(--ease);
+}
+.chip:hover { transform: translateY(-2px); }
+.chip__g { color: var(--ink-soft); font-weight: 400; }
+.stars { display: inline-flex; gap: 2px; color: #c27a2c; }
+.stars .icon { width: 1em; height: 1em; }
+.status { display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--step--1); font-weight: 600; color: var(--ink-soft); }
+.status__dot { position: relative; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); flex: none; }
+.status.is-open { color: var(--open); }
+.status.is-open .status__dot { background: var(--open); }
+.status.is-open .status__dot::after {
+  content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--open);
+  animation: pulse 2.2s var(--ease) infinite;
+}
+@keyframes pulse { from { transform: scale(1); opacity: .6; } to { transform: scale(2.8); opacity: 0; } }
+.hero__actions { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin-top: var(--space-5); width: 100%; max-width: 440px; }
+.hero__actions .btn { padding-inline: .8em; }
+
+.hero__media { --arch-w: 50% 50% var(--r-md) var(--r-md) / 64% 64% var(--r-md) var(--r-md); position: relative; order: -1; margin: 14px 0 0 14px; }
+.hero__media::before {
+  content: ""; position: absolute; inset: -14px 14px 14px -14px;
+  border: 1.5px solid var(--accent); border-radius: var(--arch-w); opacity: .55;
+}
+.arch {
+  position: relative; aspect-ratio: 3 / 2; overflow: hidden;
+  border-radius: var(--arch-w); background: var(--sand); box-shadow: var(--shadow-3);
+}
+.arch img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 64%; transform-origin: 50% 40%; animation: kenburns 26s var(--ease) infinite alternate; }
+@keyframes kenburns { from { transform: scale(1.02); } to { transform: scale(1.1) translate(-1.5%, -1%); } }
+.hero__status {
+  position: absolute; left: 50%; bottom: var(--space-3); transform: translateX(-50%);
+  padding: var(--space-2) var(--space-4); border-radius: var(--r-pill); white-space: nowrap;
+  background: var(--surface); box-shadow: var(--shadow-2);
+}
+.seal {
+  position: absolute; left: -14px; top: -14px; width: clamp(84px, 22vw, 148px); aspect-ratio: 1;
+  border-radius: 50%; background: var(--brand); color: var(--brand-ink); box-shadow: var(--shadow-2);
+}
+.seal svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.seal__ring { animation: spin 48s linear infinite; transform-origin: 50% 50%; }
+.seal__ring text { font: 600 10.5px var(--font-body); letter-spacing: .2em; fill: currentColor; text-transform: uppercase; }
+.seal__mark { fill: none; stroke: var(--accent-soft); stroke-width: 1.5; }
+.seal__t { font: 600 26px var(--font-display); fill: var(--accent-soft); }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (min-width: 640px) {
+  .hero__media { width: min(100% - 14px, 560px); justify-self: end; }
+}
+@media (min-width: 960px) {
+  .hero { padding-top: var(--space-7); }
+  .hero__grid { grid-template-columns: 1.15fr .85fr; gap: var(--space-8); }
+  .hero__title { font-size: clamp(3rem, 1rem + 4.4vw, 4.75rem); }
+  .hero__lede { order: 0; margin-top: var(--space-5); }
+  .hero__actions { margin-top: var(--space-6); }
+  .hero__media { --arch-w: var(--arch); order: 0; width: calc(100% - 14px); margin: 14px 0 var(--space-5) 14px; }
+  .arch { aspect-ratio: 4 / 5; }
+  .arch img { object-position: 50% 45%; }
+  .hero__status { bottom: var(--space-5); }
+  .seal { top: auto; left: -48px; bottom: 96px; }
+}
+
+/* Proof ------------------------------------------------------------------ */
+.proof { position: relative; overflow: hidden; background: var(--brand); color: var(--brand-ink); padding-block: var(--section-pad); }
+.proof__top { position: relative; display: grid; gap: var(--space-7); }
+.score {
+  text-align: center; padding: clamp(72px, 10vw, 104px) var(--space-5) var(--space-6);
+  border: 1.5px solid var(--line-dark); background: rgba(245, 239, 228, .03);
+  border-radius: 50% 50% var(--r-md) var(--r-md) / 170px 170px var(--r-md) var(--r-md);
+}
+.score__num {
+  display: flex; align-items: flex-start; justify-content: center; gap: var(--space-2); margin-top: var(--space-2);
+  font: 600 clamp(6.5rem, 3.6rem + 13vw, 12.5rem)/.82 var(--font-display); letter-spacing: -.05em; color: var(--accent-soft);
+}
+.score__num small { font-size: .2em; letter-spacing: 0; color: #d9cfbd; margin-top: .3em; font-weight: 600; }
+.score .stars { color: var(--accent-soft); margin-top: var(--space-5); font-size: 1.35rem; justify-content: center; }
+.score__count { margin-top: var(--space-2); font-size: var(--step-1); }
+.score__count strong { font-variant-numeric: tabular-nums; }
+.score .link-arrow { margin-top: var(--space-3); color: var(--brand-ink); }
+.proof h2 { font-size: var(--step-3); max-width: 22ch; }
+.proof h2 em { font-style: italic; font-weight: 500; color: var(--accent-soft); }
+.bigquote { margin-top: var(--space-6); padding-left: var(--space-5); border-left: 2px solid var(--accent-soft); }
+.bigquote p { font: italic 500 var(--step-2)/1.32 var(--font-display); letter-spacing: -.01em; }
+.bigquote footer { margin-top: var(--space-4); font-size: var(--step--1); color: #d9cfbd; display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+.bigquote footer .stars { color: var(--accent-soft); }
+.topics { margin-top: var(--space-7); }
+.topics__label { font-size: var(--step--1); color: #d9cfbd; margin-bottom: var(--space-3); }
+.topics ul { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.topics li {
+  display: inline-flex; align-items: baseline; gap: var(--space-2); padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--line-dark); border-radius: var(--r-pill); font-weight: 600;
+}
+.topics li span { font-weight: 400; color: #d9cfbd; font-size: var(--step--1); }
+
+.rail { position: relative; margin-top: var(--space-8); }
+.rail__head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); margin-bottom: var(--space-5); }
+.rail__title { font: 600 var(--step-1)/1.2 var(--font-body); }
+.rail__nav { display: flex; gap: var(--space-2); }
+.rail__btn {
+  display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 50%;
+  background: transparent; color: var(--brand-ink); border: 1.5px solid var(--line-dark); cursor: pointer;
+  transition: transform .35s var(--ease), opacity .3s var(--ease);
+}
+.rail__btn:hover { transform: scale(1.06); }
+.rail__btn:disabled { opacity: .35; cursor: default; transform: none; }
+.rail__track {
+  display: grid; grid-auto-flow: column; grid-auto-columns: min(86%, 380px); gap: var(--space-4);
+  overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none;
+  margin-inline: calc(-1 * var(--gutter)); padding: var(--space-1) var(--gutter) var(--space-2);
+  scroll-padding-inline: var(--gutter);
+}
+.rail__track::-webkit-scrollbar { display: none; }
+.review {
+  scroll-snap-align: start; display: flex; flex-direction: column; gap: var(--space-4);
+  padding: var(--space-6) var(--space-5); background: var(--brand-2); border-radius: var(--r-md);
+  border: 1px solid var(--line-dark);
+}
+.review .stars { color: var(--accent-soft); }
+.review blockquote p { font-size: var(--step-0); line-height: 1.6; }
+.review footer { margin-top: auto; padding-top: var(--space-4); border-top: 1px solid var(--line-dark); display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); }
+.review cite { font-style: normal; font-weight: 600; }
+.review cite span { display: block; font-weight: 400; font-size: var(--step--1); color: #d9cfbd; }
+.review time { font-size: var(--step--1); color: #d9cfbd; white-space: nowrap; }
+
+@media (min-width: 960px) {
+  .proof__top { grid-template-columns: 4fr 7fr; gap: var(--space-9); align-items: start; }
+  .rail__track { grid-auto-columns: calc((100% - 2 * var(--space-5)) / 3); gap: var(--space-5); }
+}
+
+/* Pension ---------------------------------------------------------------- */
+.pension__grid { display: grid; gap: var(--space-7); }
+.pension__media { position: relative; }
+.pension__media img { width: 100%; aspect-ratio: 5 / 4; object-fit: cover; object-position: 50% 30%; border-radius: var(--r-lg); box-shadow: var(--shadow-2); }
+.pension__tag {
+  position: absolute; right: var(--space-4); bottom: calc(-1 * var(--space-5));
+  max-width: 15rem; padding: var(--space-4) var(--space-5); border-radius: var(--r-md);
+  background: var(--surface); box-shadow: var(--shadow-2);
+  font: italic 500 var(--step-1)/1.3 var(--font-display);
+}
+.pension__tag b { display: block; font: 600 var(--step--1)/1.3 var(--font-body); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: var(--space-1); }
+.pension__body .lede { margin-top: var(--space-5); }
+.offer { margin-top: var(--space-7); border-top: 1px solid var(--line); counter-reset: offer; }
+.offer li {
+  display: grid; grid-template-columns: 2.5rem 1fr; gap: var(--space-2) var(--space-3);
+  padding-block: var(--space-5); border-bottom: 1px solid var(--line); counter-increment: offer;
+}
+.offer li::before {
+  content: "0" counter(offer); grid-row: span 2; padding-top: .3em;
+  font: italic 500 var(--step-0)/1 var(--font-display); color: var(--accent);
+}
+.offer h3 { font-size: var(--step-2); }
+.offer p { color: var(--ink-soft); }
+.offer .is-main h3 { font-size: var(--step-3); }
+.offer__tags { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
+.offer__tags span { padding: var(--space-1) var(--space-3); border-radius: var(--r-pill); background: var(--sand); color: var(--ink); font-size: var(--step--1); font-weight: 600; }
+.conditions { margin-top: var(--space-7); padding: var(--space-6) var(--space-5); border-radius: var(--r-md); background: var(--surface); border: 1px solid var(--line); }
+.conditions h3 { font-size: var(--step-1); }
+.conditions > p { margin-top: var(--space-2); color: var(--ink-soft); }
+.conditions ul { display: grid; gap: var(--space-3); margin-top: var(--space-4); }
+.conditions li { display: flex; gap: var(--space-3); align-items: flex-start; font-weight: 600; }
+.conditions li .icon { color: var(--brand); margin-top: .15em; }
+.pension__who { margin-top: var(--space-5); color: var(--ink-soft); }
+
+@media (min-width: 960px) {
+  .pension__grid { grid-template-columns: 5fr 6fr; gap: var(--space-9); align-items: start; }
+  .pension__media { position: sticky; top: calc(var(--header-h) + var(--space-6)); }
+  .pension__media img { aspect-ratio: 4 / 5; object-position: 50% 15%; }
+  .pension__tag { right: auto; left: calc(-1 * var(--space-6)); bottom: var(--space-7); }
+}
+
+/* Séjour ----------------------------------------------------------------- */
+.sejour { background: var(--sand); }
+.sejour__grid { display: grid; gap: var(--space-8); }
+.sejour__head .lede { margin-top: var(--space-5); }
+.stack { position: relative; margin-top: var(--space-7); padding-bottom: 18%; }
+.stack__a { width: 72%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: var(--r-lg); box-shadow: var(--shadow-2); }
+.stack__b {
+  position: absolute; right: 0; bottom: 0; width: 48%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 50% 30%;
+  border: 6px solid var(--surface); border-radius: var(--r-md); box-shadow: var(--shadow-3); transform: rotate(2.5deg);
+}
+.steps { position: relative; display: grid; gap: var(--space-7); }
+.steps::before { content: ""; position: absolute; left: 8px; top: 12px; bottom: 12px; width: 1.5px; background: var(--line); }
+.steps li { position: relative; padding-left: var(--space-7); }
+.steps li::before {
+  content: ""; position: absolute; left: 0; top: 2px; width: 18px; height: 22px;
+  background: var(--sand); border: 2px solid var(--accent); border-bottom-width: 2px; border-radius: 9px 9px 3px 3px;
+}
+.steps__label { display: block; font: 600 var(--step--1)/1.2 var(--font-body); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.steps h3 { margin-top: var(--space-2); font-size: var(--step-3); }
+.steps p { margin-top: var(--space-3); color: var(--ink-soft); max-width: 52ch; }
+.steps blockquote { margin-top: var(--space-3); }
+.steps blockquote p { font: italic 500 var(--step-1)/1.4 var(--font-display); color: var(--ink); }
+.steps blockquote footer { margin-top: var(--space-2); font-size: var(--step--1); color: var(--ink-soft); }
+.steps .link-arrow { margin-top: var(--space-2); }
+
+@media (min-width: 960px) {
+  .sejour__grid { grid-template-columns: 5fr 6fr; gap: var(--space-9); align-items: start; }
+  .sejour__head { position: sticky; top: calc(var(--header-h) + var(--space-6)); }
+  .steps { padding-top: var(--space-4); gap: var(--space-8); }
+}
+
+/* Accès + horaires ------------------------------------------------------- */
+.acces__grid { display: grid; gap: var(--space-7); }
+.address { display: flex; gap: var(--space-3); margin-top: var(--space-5); font-size: var(--step-1); line-height: 1.45; font-weight: 600; }
+.address .icon { color: var(--accent); margin-top: .2em; }
+.acces__info .status { margin-top: var(--space-5); font-size: var(--step-0); }
+.hours { width: 100%; margin-top: var(--space-5); border-collapse: separate; border-spacing: 0; font-variant-numeric: tabular-nums; }
+.hours th, .hours td { padding: var(--space-3) var(--space-3); border-bottom: 1px solid var(--line); vertical-align: top; }
+.hours th { text-align: left; font-weight: 600; white-space: nowrap; }
+.hours td { text-align: right; color: var(--ink-soft); }
+.hours td span { display: inline-block; white-space: nowrap; }
+.hours td span + span::before { content: "·"; margin: 0 .45em; color: var(--line); }
+.hours tr.is-today th, .hours tr.is-today td { background: var(--brand); color: var(--brand-ink); border-bottom-color: var(--brand); }
+.hours tr.is-today th { border-radius: var(--r-sm) 0 0 var(--r-sm); }
+.hours tr.is-today td { border-radius: 0 var(--r-sm) var(--r-sm) 0; }
+.hours tr.is-today td span + span::before { color: var(--accent-soft); }
+.today-tag { display: block; font: 600 .75rem/1.2 var(--font-body); letter-spacing: .1em; text-transform: uppercase; color: var(--accent-soft); margin-top: 2px; }
+.access-list { display: grid; gap: var(--space-3); margin-top: var(--space-6); }
+.access-list li { display: flex; gap: var(--space-3); align-items: center; }
+.access-list .icon { color: var(--accent); }
+.acces__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
+.map {
+  position: relative; overflow: hidden; border-radius: var(--r-lg); background: var(--sand);
+  aspect-ratio: 4 / 5; box-shadow: var(--shadow-2); border: 1px solid var(--line);
+}
+.map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.map__fallback { margin-top: var(--space-3); font-size: var(--step--1); color: var(--ink-soft); }
+.map__fallback a { font-weight: 600; color: var(--ink); }
+
+@media (min-width: 640px) { .map { aspect-ratio: 4 / 3; } }
+@media (min-width: 960px) {
+  .acces__grid { grid-template-columns: 5fr 7fr; gap: var(--space-9); align-items: start; }
+  .map { aspect-ratio: auto; height: 100%; min-height: 560px; }
+  .acces__mapcol { align-self: stretch; display: flex; flex-direction: column; }
+  .acces__mapcol .map { flex: 1; }
+}
+
+/* Contact ---------------------------------------------------------------- */
+.contact { border-top: 1px solid var(--line); }
+.contact__grid { display: grid; gap: var(--space-7); }
+.contact h2 { font-size: var(--step-4); max-width: 16ch; }
+.contact .lede { margin-top: var(--space-5); }
+.bignum {
+  display: inline-flex; align-items: center; gap: var(--space-4); min-height: 48px;
+  font: 600 clamp(2.1rem, 1.2rem + 4.6vw, 4.6rem)/1 var(--font-display); letter-spacing: -.03em;
+  text-decoration: none; color: var(--brand); white-space: nowrap;
+}
+.bignum span { background: linear-gradient(var(--accent-soft), var(--accent-soft)) 0 92% / 100% .12em no-repeat; }
+.contact__label { font-size: var(--step--1); color: var(--ink-soft); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; margin-bottom: var(--space-3); }
+.contact__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
+.contact__fixed { margin-top: var(--space-5); color: var(--ink-soft); }
+.contact__fixed a { font-weight: 600; color: var(--ink); }
+@media (min-width: 960px) {
+  .contact__grid { grid-template-columns: 1fr 1fr; gap: var(--space-9); align-items: end; }
+}
+
+/* Footer ----------------------------------------------------------------- */
+.site-footer { background: var(--ink); color: #c8bfae; padding-block: var(--space-8) var(--space-6); }
+.site-footer a { color: var(--brand-ink); }
+.footer__grid { display: grid; gap: var(--space-6); }
+.footer__brand { display: flex; align-items: center; gap: var(--space-3); font: 600 var(--step-2)/1.1 var(--font-display); color: var(--brand-ink); }
+.footer__brand svg { width: 34px; height: 40px; color: var(--accent-soft); }
+.footer__brand svg text { font: 600 22px var(--font-display); fill: var(--ink); }
+.footer__brand em { font-style: italic; font-weight: 500; color: var(--accent-soft); }
+.nowrap { white-space: nowrap; }
+.footer__tagline { margin-top: var(--space-4); max-width: 34ch; }
+.footer__col h2 { font: 600 var(--step--1)/1.2 var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--accent-soft); margin-bottom: var(--space-3); }
+.footer__col a { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 44px; text-decoration: none; }
+.footer__col a:hover { text-decoration: underline; }
+.footer__legal { margin-top: var(--space-7); padding-top: var(--space-5); border-top: 1px solid rgba(200, 191, 174, .2); font-size: var(--step--1); display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); justify-content: space-between; }
+@media (min-width: 768px) { .footer__grid { grid-template-columns: 1.4fr 1fr 1fr; } }
+
+/* Mobile action bar ------------------------------------------------------ */
+.actionbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2);
+  padding: var(--space-2) var(--space-3) calc(var(--space-2) + env(safe-area-inset-bottom));
+  background: var(--surface); border-top: 1px solid var(--line); box-shadow: 0 -8px 24px -12px rgba(30, 27, 22, .25);
+}
+.actionbar a {
+  display: flex; align-items: center; justify-content: center; gap: var(--space-2); min-height: 52px;
+  border-radius: var(--r-sm); font-weight: 600; font-size: .95rem; text-decoration: none;
+  background: var(--bg); border: 1px solid var(--line); color: var(--ink);
+}
+.actionbar a:first-child { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+@media (min-width: 768px) {
+  body { padding-bottom: 0; }
+  .actionbar { display: none; }
+}
+
+/* Reveal ----------------------------------------------------------------- */
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.js .reveal.is-in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+</style>
+<!--sf:preview--><meta name="robots" content="noindex, nofollow"><!--/sf:preview-->
+<!--sf:og--><meta property="og:image" content="https://le-chenil-des-templiers-reims.aymenjallouli.dev/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://le-chenil-des-templiers-reims.aymenjallouli.dev/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://le-chenil-des-templiers-reims.aymenjallouli.dev/og.jpg"><!--/sf:og-->
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-sms" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><path d="M3 11 22 2l-9 19-2-8z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.7 2.7L16.5 9.5"/></symbol>
+  <symbol id="i-park" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9.5 17V7h3.5a3 3 0 0 1 0 6H9.5"/></symbol>
+  <symbol id="i-access" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="1.8"/><path d="M12 8v6h5l2 6"/><path d="M8.6 10.6a5.5 5.5 0 1 0 7.2 7.4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="site-header" id="top">
+  <div class="container header__inner">
+    <a class="brand" href="#top" aria-label="Le Chenil des Templiers, haut de page">
+      <svg class="brand__mark" viewBox="0 0 40 48" aria-hidden="true"><path d="M2 47V20a18 18 0 0 1 36 0v27z" fill="currentColor"/><text x="20" y="40" text-anchor="middle">T</text></svg>
+      <span class="brand__name">Le Chenil <em>des Templiers</em></span>
+    </a>
+    <nav class="nav" id="menu" aria-label="Navigation principale">
+      <ul class="nav__list">
+        <li><a href="#avis">Avis</a></li>
+        <li><a href="#pension">La pension</a></li>
+        <li><a href="#sejour">Le séjour</a></li>
+        <li><a href="#acces">Horaires &amp; accès</a></li>
+        <li><a href="#contact">Réserver</a></li>
+      </ul>
+      <a class="btn btn--brand nav__call" href="tel:+33681824451"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>06 81 82 44 51</a>
+    </nav>
+    <a class="btn btn--brand header__cta" href="tel:+33681824451"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>06 81 82 44 51</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+      <svg class="icon i-open" aria-hidden="true"><use href="#i-menu"/></svg>
+      <svg class="icon i-close" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow hero__kicker">Pension canine et féline</p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="sr-only">Le Chenil des Templiers&nbsp;: </span>Il retrouve ses copains.
+          <span class="l2">Vous suivez ses vacances.</span>
+        </h1>
+        <p class="hero__lede">Pension pour chiens et chats à La Neuville-au-Temple, ouverte toute l'année. Box individuel, parc privatif, photos du séjour sur Facebook.</p>
+        <div class="hero__meta">
+          <a class="chip" href="https://www.google.com/maps/place/?q=place_id:ChIJWQh5bKnf60cRReWa1o8f0TY" target="_blank" rel="noopener" aria-label="Note Google 4,9 sur 5, 101 avis">
+            <span class="stars" aria-hidden="true"><svg class="icon"><use href="#i-star"/></svg></span>
+            4,9 <span class="chip__g">· 101 avis Google</span>
+          </a>
+        </div>
+        <div class="hero__actions">
+          <a class="btn btn--brand" href="tel:+33681824451"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Appeler</a>
+          <a class="btn btn--line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Le%20Chenil%20des%20Templiers%2C%20107%20Les%20Grandes%20Noues%2C%2051400%20La%20Neuville-au-Temple" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg>Itinéraire</a>
+        </div>
+      </div>
+      <figure class="hero__media">
+        <div class="arch">
+          <img src="assets/photos/photo-01.jpg" width="1345" height="1600" fetchpriority="high" decoding="async"
+               alt="Un chien au long pelage noir et fauve, langue tirée, avance vers l'objectif dans un sous-bois ensoleillé.">
+        </div>
+        <p class="status hero__status" data-status hidden><span class="status__dot" aria-hidden="true"></span><span data-status-text></span></p>
+        <div class="seal" aria-hidden="true">
+          <svg class="seal__ring" viewBox="0 0 140 140">
+            <defs><path id="seal-circle" d="M70 70m-52 0a52 52 0 1 1 104 0a52 52 0 1 1-104 0"/></defs>
+            <text><textPath href="#seal-circle" textLength="322">Pension · Éducation · Élevage · Depuis 2015 ·</textPath></text>
+          </svg>
+          <svg viewBox="0 0 140 140">
+            <path class="seal__mark" d="M54 92V66a16 16 0 0 1 32 0v26z"/>
+            <text class="seal__t" x="70" y="88" text-anchor="middle">T</text>
+          </svg>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- AVIS -->
+  <section class="proof on-dark" id="avis" aria-labelledby="avis-title">
+    <div class="container">
+      <div class="proof__top">
+        <div class="score reveal">
+          <p class="eyebrow">Avis Google</p>
+          <p class="score__num" aria-label="Note moyenne : 4,9 sur 5">4,9<small aria-hidden="true">/5</small></p>
+          <span class="stars" aria-hidden="true"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>
+          <p class="score__count">sur <strong data-count="101">101</strong> avis Google</p>
+          <a class="link-arrow" href="https://www.google.com/maps/place/?q=place_id:ChIJWQh5bKnf60cRReWa1o8f0TY" target="_blank" rel="noopener">Voir les 101 avis sur Google<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="reveal">
+          <h2 id="avis-title">Le mot qui revient le plus dans leurs avis&nbsp;: <em>confiance.</em></h2>
+          <blockquote class="bigquote">
+            <p>«&nbsp;Grâce à vous, nous partons l'esprit serein en sachant qu'il est heureux, en sécurité et choyé.&nbsp;»</p>
+            <footer>
+              <span class="stars" aria-label="5 étoiles sur 5"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>
+              <span>Marine, à propos de Floki</span>
+            </footer>
+          </blockquote>
+          <div class="topics">
+            <p class="topics__label">Les mots qui reviennent dans les avis Google</p>
+            <ul>
+              <li>confiance <span>10 mentions</span></li>
+              <li>week-end <span>5</span></li>
+              <li>bienveillance <span>4</span></li>
+              <li>Facebook <span>4</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="rail reveal" role="region" aria-roledescription="carrousel" aria-label="Avis de clients">
+        <div class="rail__head">
+          <p class="rail__title">Floki, Orage, Néo et Napo, racontés par leurs maîtres</p>
+          <div class="rail__nav">
+            <button class="rail__btn" type="button" data-rail="-1" aria-label="Avis précédent"><svg class="icon" aria-hidden="true"><use href="#i-arrow-l"/></svg></button>
+            <button class="rail__btn" type="button" data-rail="1" aria-label="Avis suivant"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+        <ul class="rail__track" tabindex="0" aria-label="Avis, faites défiler horizontalement">
+          <li class="review">
+            <span class="stars" aria-label="5 étoiles sur 5"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>
+            <blockquote><p>«&nbsp;Un immense merci à Michèle et Jérôme pour leur accueil et leur gentillesse. Nous leur confions Néo et Napo en toute sérénité, car nous savons qu'ils sont entre de très bonnes mains. Ils prennent soin d'eux avec beaucoup d'attention, de bienveillance et de professionnalisme.&nbsp;…&nbsp;»</p></blockquote>
+            <footer><cite>Kevin<span>pour Néo et Napo</span></cite><time datetime="2026-06-11">juin 2026</time></footer>
+          </li>
+          <li class="review">
+            <span class="stars" aria-label="5 étoiles sur 5"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>
+            <blockquote><p>«&nbsp;… Première fois que nous laissons notre petit gamin en pension et vraiment nous sommes partis en vacances l'esprit serein&nbsp;! Visite des lieux et explications quelque jour avant la garde ce qui nous a vraiment mis en confiance … Photos régulières sur leur page ce qui nous permettait de suivre les petites vacances de notre gamin. Les lieux sont ultras propre et les animaux baladés chaques jours. …&nbsp;»</p></blockquote>
+            <footer><cite>Angeline D.<span>premier séjour</span></cite><time datetime="2025-09-15">sept. 2025</time></footer>
+          </li>
+          <li class="review">
+            <span class="stars" aria-label="5 étoiles sur 5"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>
+            <blockquote><p>«&nbsp;Orage est toujours très bien accueilli et ravi d’aller au chenil des templiers&nbsp;! Il adore y retrouver des copains (il a tendance à beaucoup leur parler parfois), pouvoir gambader… et moi je suis ravie de pouvoir avoir de ses nouvelles régulièrement sur le compte facebook&nbsp;!! …&nbsp;»</p></blockquote>
+            <footer><cite>My L.<span>pour Orage</span></cite><time datetime="2023-05-06">mai 2023</time></footer>
+          </li>
+          <li class="review">
+            <span class="stars" aria-label="5 étoiles sur 5"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>
+            <blockquote><p>«&nbsp;Floki est toujours tellement bien accueilli au Chenil des Templiers&nbsp;! Il est toujours ravi d’y aller. Il adore retrouver ses copains. De mon côté, j’aime recevoir des nouvelles sur Facebook avec des photos/vidéos tous les jours…&nbsp;»</p></blockquote>
+            <footer><cite>Marine<span>pour Floki</span></cite><time datetime="2026-03-01">mars 2026</time></footer>
+          </li>
+          <li class="review">
+            <span class="stars" aria-label="5 étoiles sur 5"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>
+            <blockquote><p>«&nbsp;Super pension, nous sommes toujours bien accueillis et surtout de vrais professionnels aux petits soins avec nos animaux.&nbsp;»</p></blockquote>
+            <footer><cite>Aymeric L.</cite><time datetime="2026-07-03">juil. 2026</time></footer>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENSION -->
+  <section class="section pension" id="pension" aria-labelledby="pension-title">
+    <div class="container pension__grid">
+      <figure class="pension__media reveal">
+        <img src="assets/photos/photo-07.jpg" width="1080" height="1440" loading="lazy" decoding="async"
+             alt="Un chien noir et blanc bondit sur une grande pelouse au soleil, la queue en l'air.">
+        <figcaption class="pension__tag"><b>Ouverte toute l'année</b>Pour un week-end comme pour l'été.</figcaption>
+      </figure>
+      <div class="pension__body">
+        <p class="eyebrow">La pension</p>
+        <h2 class="h2" id="pension-title">Un box à lui, un parc à lui.</h2>
+        <p class="lede">Depuis 2015, Michèle et sa famille accueillent chiens et chats à La Neuville-au-Temple. Chiens de toutes races et de toutes tailles.</p>
+        <ol class="offer">
+          <li class="is-main reveal">
+            <h3>Pension canine</h3>
+            <div>
+              <p>Chaque chien a son box individuel, avec accès à un parc privatif.</p>
+              <p class="offer__tags"><span>Box individuel</span><span>Parc privatif</span><span>Toutes races, toutes tailles</span></p>
+            </div>
+          </li>
+          <li class="reveal">
+            <h3>Pension pour chats</h3>
+            <p>Les chats sont accueillis aussi. Appelez pour en parler.</p>
+          </li>
+          <li class="reveal">
+            <h3>Éducation canine</h3>
+            <p>Le chenil fait aussi de l'éducation canine. Renseignements par téléphone.</p>
+          </li>
+          <li class="reveal">
+            <h3>Élevage canin</h3>
+            <p>Le Chenil des Templiers est également un élevage. Renseignements par téléphone.</p>
+          </li>
+        </ol>
+        <div class="conditions reveal">
+          <h3>Conditions d'accueil</h3>
+          <p>Pour séjourner au chenil, votre chien doit être&nbsp;:</p>
+          <ul>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>à jour de ses vaccins</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>identifié</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>traité contre les parasites</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SÉJOUR -->
+  <section class="section sejour" id="sejour" aria-labelledby="sejour-title">
+    <div class="container sejour__grid">
+      <div class="sejour__head">
+        <p class="eyebrow">Le séjour</p>
+        <h2 class="h2" id="sejour-title">Vous êtes en vacances. Lui aussi.</h2>
+        <p class="lede">Ce que les clients racontent de leurs séjours, de la première visite au retour à la maison.</p>
+        <div class="stack reveal">
+          <img class="stack__a" src="assets/photos/photo-06.jpg" width="720" height="960" loading="lazy" decoding="async"
+               alt="Un grand chien blanc à poil long, langue tirée, marche sur une allée de gravier bordée d'arbres.">
+          <img class="stack__b" src="assets/photos/photo-02.jpg" width="1009" height="1600" loading="lazy" decoding="async"
+               alt="Portrait d'un chien au pelage noir et fauve, oreilles dressées, assis sur le gravier.">
+        </div>
+      </div>
+      <ol class="steps">
+        <li class="reveal">
+          <span class="steps__label">Avant</span>
+          <h3>Une visite des lieux</h3>
+          <p>Avant une première garde, une visite et des explications. Vous voyez où il va dormir et jouer avant de le confier.</p>
+        </li>
+        <li class="reveal">
+          <span class="steps__label">Pendant</span>
+          <h3>Balades, copains, grand air</h3>
+          <p>Des balades chaque jour, des copains pour jouer, de la place pour gambader. Et des lieux tenus très propres.</p>
+        </li>
+        <li class="reveal">
+          <span class="steps__label">Des nouvelles</span>
+          <h3>Ses vacances en photos</h3>
+          <p>Photos et vidéos sont publiées sur la page Facebook du chenil. Vous suivez ses petites vacances depuis les vôtres.</p>
+          <a class="link-arrow" href="https://www.facebook.com/lechenildestempliers/" target="_blank" rel="noopener">Voir la page Facebook<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg></a>
+        </li>
+        <li class="reveal">
+          <span class="steps__label">Au retour</span>
+          <h3>Il y retourne sans se faire prier</h3>
+          <blockquote>
+            <p>«&nbsp;On sent qu'il n'a jamais peur d'y retourner, bien au contraire&nbsp;!&nbsp;»</p>
+            <footer>Marine, à propos de Floki · avis Google 5 étoiles</footer>
+          </blockquote>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- HORAIRES & ACCÈS -->
+  <section class="section acces" id="acces" aria-labelledby="acces-title">
+    <div class="container acces__grid">
+      <div class="acces__info">
+        <p class="eyebrow">Horaires &amp; accès</p>
+        <h2 class="h2" id="acces-title">Quand passer, comment venir.</h2>
+        <p class="address"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span>107 Les Grandes Noues<br>51400 La Neuville-au-Temple</span></p>
+        <p class="status" data-status hidden><span class="status__dot" aria-hidden="true"></span><span data-status-text></span></p>
+        <table class="hours">
+          <caption class="sr-only">Horaires d'ouverture</caption>
+          <tbody>
+            <tr data-day="0" data-hours="09:00–12:00, 16:00–18:30"><th scope="row">Lundi</th><td><span>9h – 12h</span><span>16h – 18h30</span></td></tr>
+            <tr data-day="1" data-hours="09:00–12:00, 16:00–18:30"><th scope="row">Mardi</th><td><span>9h – 12h</span><span>16h – 18h30</span></td></tr>
+            <tr data-day="2" data-hours="09:00–12:00, 16:00–18:30"><th scope="row">Mercredi</th><td><span>9h – 12h</span><span>16h – 18h30</span></td></tr>
+            <tr data-day="3" data-hours="09:00–12:00, 16:00–18:30"><th scope="row">Jeudi</th><td><span>9h – 12h</span><span>16h – 18h30</span></td></tr>
+            <tr data-day="4" data-hours="09:00–12:00, 16:00–18:30"><th scope="row">Vendredi</th><td><span>9h – 12h</span><span>16h – 18h30</span></td></tr>
+            <tr data-day="5" data-hours="09:00–12:00, 16:00–18:30"><th scope="row">Samedi</th><td><span>9h – 12h</span><span>16h – 18h30</span></td></tr>
+            <tr data-day="6" data-hours="09:00–10:00, 17:00–18:30"><th scope="row">Dimanche</th><td><span>9h – 10h</span><span>17h – 18h30</span></td></tr>
+          </tbody>
+        </table>
+        <ul class="access-list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-park"/></svg>Parking gratuit</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-access"/></svg>Entrée et parking accessibles en fauteuil roulant</li>
+        </ul>
+        <div class="acces__actions">
+          <a class="btn btn--brand" href="https://www.google.com/maps/dir/?api=1&amp;destination=Le%20Chenil%20des%20Templiers%2C%20107%20Les%20Grandes%20Noues%2C%2051400%20La%20Neuville-au-Temple" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg>Itinéraire</a>
+          <a class="btn btn--line" href="tel:+33681824451"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Appeler</a>
+        </div>
+      </div>
+      <div class="acces__mapcol reveal">
+        <div class="map">
+          <iframe src="https://www.google.com/maps?q=Le%20Chenil%20des%20Templiers%2C%20107%20Les%20Grandes%20Noues%2C%2051400%20La%20Neuville-au-Temple&amp;output=embed"
+                  title="Carte : Le Chenil des Templiers, 107 Les Grandes Noues, La Neuville-au-Temple" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <p class="map__fallback">La carte ne s'affiche pas&nbsp;? <a href="https://www.google.com/maps/place/?q=place_id:ChIJWQh5bKnf60cRReWa1o8f0TY" target="_blank" rel="noopener">Ouvrir dans Google Maps</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="container contact__grid">
+      <div class="reveal">
+        <p class="eyebrow">Réserver</p>
+        <h2 id="contact-title">Un week-end, l'été&nbsp;: réservez sa place.</h2>
+        <p class="lede">Appelez le chenil ou envoyez un SMS avec vos dates. Pour un premier séjour, demandez à visiter.</p>
+      </div>
+      <div class="reveal">
+        <p class="contact__label">Portable</p>
+        <a class="bignum" href="tel:+33681824451"><span>06 81 82 44 51</span></a>
+        <div class="contact__actions">
+          <a class="btn btn--brand" href="sms:+33681824451?&amp;body=Bonjour%2C%20je%20souhaiterais%20r%C3%A9server%20une%20place%20en%20pension%20pour%20mon%20chien.%20Dates%20%3A%20"><svg class="icon" aria-hidden="true"><use href="#i-sms"/></svg>Envoyer un SMS</a>
+          <a class="btn btn--line" href="https://www.facebook.com/lechenildestempliers/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-fb"/></svg>Facebook</a>
+        </div>
+        <p class="contact__fixed">Ligne fixe&nbsp;: <a href="tel:+33326655415">03 26 65 54 15</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand"><svg viewBox="0 0 40 48" aria-hidden="true"><path d="M2 47V20a18 18 0 0 1 36 0v27z" fill="currentColor"/><text x="20" y="40" text-anchor="middle">T</text></svg><span>Le Chenil <em>des Templiers</em></span></p>
+        <p class="footer__tagline">Pension pour chiens et chats, éducation et élevage canins.</p>
+      </div>
+      <div class="footer__col">
+        <h2>Adresse</h2>
+        <p>107 Les Grandes Noues<br>51400 La Neuville-au-Temple</p>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Le%20Chenil%20des%20Templiers%2C%20107%20Les%20Grandes%20Noues%2C%2051400%20La%20Neuville-au-Temple" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Itinéraire</a>
+      </div>
+      <div class="footer__col">
+        <h2>Contact</h2>
+        <a href="tel:+33681824451"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>06 81 82 44 51</a><br>
+        <a href="https://www.facebook.com/lechenildestempliers/" target="_blank" rel="noopener" aria-label="Le Chenil des Templiers sur Facebook"><svg class="icon" aria-hidden="true"><use href="#i-fb"/></svg>Facebook</a>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <p>© <span data-year></span> SAS Le Chenil des Templiers · <span class="nowrap">SIREN 813 007 192</span></p>
+      <p>Note Google 4,9/5 · 101 avis</p>
+    </div>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Actions rapides">
+  <a href="tel:+33681824451"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Appeler</a>
+  <a href="sms:+33681824451?&amp;body=Bonjour%2C%20je%20souhaiterais%20r%C3%A9server%20une%20place%20en%20pension%20pour%20mon%20chien.%20Dates%20%3A%20"><svg class="icon" aria-hidden="true"><use href="#i-sms"/></svg>SMS</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Le%20Chenil%20des%20Templiers%2C%20107%20Les%20Grandes%20Noues%2C%2051400%20La%20Neuville-au-Temple" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg>Itinéraire</a>
+</nav>
+
+<script>
+(() => {
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.documentElement.classList.add('js');
+
+  /* Menu */
+  const toggle = $('.menu-toggle'), menu = $('#menu');
+  const isOpen = () => toggle.getAttribute('aria-expanded') === 'true';
+  const setMenu = (open) => {
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    menu.classList.toggle('is-open', open);
+    document.body.classList.toggle('menu-open', open);
+  };
+  toggle.addEventListener('click', () => {
+    setMenu(!isOpen());
+    if (isOpen()) $('a', menu).focus({ preventScroll: true });
+  });
+  menu.addEventListener('click', (e) => { if (e.target.closest('a') && isOpen()) setMenu(false); });
+  addEventListener('keydown', (e) => { if (e.key === 'Escape' && isOpen()) { setMenu(false); toggle.focus(); } });
+  matchMedia('(min-width: 960px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
+
+  /* Smooth in-page anchors (JS so programmatic scrolls stay instant) */
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a || a.getAttribute('href').length < 2) return;
+    const el = document.getElementById(a.getAttribute('href').slice(1));
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    history.pushState(null, '', a.getAttribute('href'));
+    if (a.classList.contains('skip-link')) { el.setAttribute('tabindex', '-1'); el.focus({ preventScroll: true }); }
+  });
+
+  /* Header shadow */
+  const header = $('.site-header');
+  const onScroll = () => header.classList.toggle('is-scrolled', scrollY > 8);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  /* Hours: today + live status (Europe/Paris) */
+  const DAYS = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
+  const rows = $$('[data-hours]');
+  const sched = [];
+  const parse = (s) => {
+    s = String(s || '').toLowerCase().trim();
+    if (!s || /ferm|closed/.test(s)) return [];
+    if (/24\s*h|24\/24|24 heures/.test(s)) return [[0, 1440]];
+    return s.split(/[,;]|\bet\b/).map((p) => {
+      const m = p.match(/(\d{1,2})(?:\s*[:h.]\s*(\d{2}))?\s*h?\s*[–—-]\s*(\d{1,2})(?:\s*[:h.]\s*(\d{2}))?/);
+      if (!m) return null;
+      const a = +m[1] * 60 + (+m[2] || 0);
+      let b = +m[3] * 60 + (+m[4] || 0);
+      if (b <= a) b += 1440;
+      return [a, b];
+    }).filter(Boolean).sort((x, y) => x[0] - y[0]);
+  };
+  rows.forEach((r) => { sched[+r.dataset.day] = parse(r.dataset.hours); });
+  const now = () => {
+    try {
+      const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Paris', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date());
+      const get = (t) => (parts.find((p) => p.type === t) || {}).value;
+      const d = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].indexOf(get('weekday'));
+      if (d < 0) throw 0;
+      return { d, m: (+get('hour') % 24) * 60 + +get('minute') };
+    } catch (_) {
+      const n = new Date();
+      return { d: (n.getDay() + 6) % 7, m: n.getHours() * 60 + n.getMinutes() };
+    }
+  };
+  const fmt = (m) => { m %= 1440; const h = Math.floor(m / 60), mm = m % 60; return h + 'h' + (mm ? String(mm).padStart(2, '0') : ''); };
+  const status = () => {
+    const { d, m } = now();
+    const today = sched[d] || [], prev = sched[(d + 6) % 7] || [];
+    for (const [a, b] of today) if (m >= a && m < b) return { d, open: true, text: b - a >= 1440 ? 'Ouvert 24h/24' : 'Ouvert maintenant · jusqu’à ' + fmt(b) };
+    for (const [, b] of prev) if (b > 1440 && m < b - 1440) return { d, open: true, text: 'Ouvert maintenant · jusqu’à ' + fmt(b) };
+    for (const [a] of today) if (a > m) return { d, open: false, text: 'Fermé · ouvre à ' + fmt(a) };
+    for (let i = 1; i <= 7; i++) {
+      const s = sched[(d + i) % 7];
+      if (s && s.length) return { d, open: false, text: 'Fermé · ouvre ' + (i === 1 ? 'demain' : DAYS[(d + i) % 7]) + ' à ' + fmt(s[0][0]) };
+    }
+    return { d, open: false, text: '' };
+  };
+  const paint = () => {
+    if (!rows.length) return;
+    const st = status();
+    $$('[data-status]').forEach((el) => {
+      if (!st.text) return;
+      el.classList.toggle('is-open', st.open);
+      $('[data-status-text]', el).textContent = st.text;
+      el.hidden = false;
+    });
+    rows.forEach((r) => {
+      const today = +r.dataset.day === st.d;
+      r.classList.toggle('is-today', today);
+      const tag = $('.today-tag', r);
+      if (today && !tag) $('th', r).insertAdjacentHTML('beforeend', '<span class="today-tag">Aujourd’hui</span>');
+      if (!today && tag) tag.remove();
+    });
+  };
+  paint(); setInterval(paint, 60000);
+
+  /* Reveal + count-up */
+  const counters = $$('[data-count]');
+  const count = (el) => {
+    const end = +el.dataset.count, t0 = performance.now(), dur = 1400;
+    const tick = (t) => {
+      const p = Math.min(1, (t - t0) / dur);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  if ('IntersectionObserver' in window && !reduce) {
+    const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add('is-in');
+      $$('[data-count]', en.target).forEach(count);
+      io.unobserve(en.target);
+    }), { rootMargin: '0px 0px -8% 0px', threshold: .08 });
+    $$('.reveal').forEach((el) => io.observe(el));
+  } else {
+    $$('.reveal').forEach((el) => el.classList.add('is-in'));
+  }
+
+  /* Review rail */
+  const track = $('.rail__track');
+  if (track) {
+    const btns = $$('[data-rail]');
+    const step = () => (track.firstElementChild ? track.firstElementChild.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 16) : 300);
+    btns.forEach((b) => b.addEventListener('click', () => track.scrollBy({ left: step() * +b.dataset.rail, behavior: reduce ? 'auto' : 'smooth' })));
+    const upd = () => {
+      const max = track.scrollWidth - track.clientWidth - 2;
+      btns[0].disabled = track.scrollLeft <= 2;
+      btns[1].disabled = track.scrollLeft >= max;
+    };
+    track.addEventListener('scroll', upd, { passive: true }); addEventListener('resize', upd); upd();
+  }
+
+  /* Year */
+  $$('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
+})();
+</script>
+<!--sf:preview--><div style="padding:18px 16px;font:13px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;background:#0f0f10;color:#a3a3a8">Aperçu réalisé par Aymen Jallouli pour Le Chenil des Templiers : ce site n'est pas encore le site officiel de l'établissement.</div><!--/sf:preview-->
+<!--sf:track--><script>(function(){try{var q=new URLSearchParams(location.search),r=q.get('r')||sessionStorage.getItem('sf_r');if(!r)return;sessionStorage.setItem('sf_r',r);navigator.sendBeacon("https://track.aymenjallouli.dev/t"+'?r='+encodeURIComponent(r)+'&p='+encodeURIComponent(location.pathname));}catch(e){}})();</script><!--/sf:track-->
+</body>
+</html>
